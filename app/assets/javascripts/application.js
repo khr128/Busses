@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require template/ipad.jst
+//= require template/iphone.jst
 //= require_tree .

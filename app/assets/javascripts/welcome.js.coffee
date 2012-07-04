@@ -5,3 +5,9 @@
 jQuery(document).ready ->
   jQuery('.tab-pane#ipad').html JST['template/ipad']()
   jQuery('.tab-pane#iphone').html JST['template/iphone']()
+
+  jQuery.ajax(
+    url:"http://webservices.nextbus.com/service/publicXMLFeed?command=agencyList",
+    success: (data, textStatus, jqXHR) ->
+      jQuery("div#available_agencies").html(JST['template/availableAgencies'](firstAgency: data.activeElement.firstElementChild))
+  )
