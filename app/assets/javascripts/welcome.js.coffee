@@ -9,5 +9,5 @@ jQuery(document).ready ->
   jQuery.ajax(
     url:"http://webservices.nextbus.com/service/publicXMLFeed?command=agencyList",
     success: (data, textStatus, jqXHR) ->
-      jQuery("div#available_agencies").html(JST['template/availableAgencies'](firstAgency: data.activeElement.firstElementChild))
+      jQuery("div#available_agencies").html(JST['template/availableAgencies'](firstAgency: data.documentElement.firstElementChild))
   )
