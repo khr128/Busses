@@ -1,5 +1,5 @@
 <ul>
 <% var agency = firstAgency; while(agency) { %>
-  <li class="available-agency"><%= agency.attributes["title"].value %></li>
+  <li class="available-agency"><%= agency.attributes["title"].value %> -- <%= agency.attributes["regionTitle"].value %></li>
 <% agency = agency.nextElementSibling; } %>
 </ul>
